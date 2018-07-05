@@ -1,0 +1,645 @@
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+  
+  <style>
+  .sticky {
+  position: fixed;
+  top: 0;
+  margin: 0px 0px;
+  width: auto;
+}
+.modal-backdrop{
+  bottom: 0;
+}
+
+
+ .intro{
+    background-image: url(background.jpg);
+    image-orientation:initial;
+    display:block;
+   width: 100%;
+   height: 100%;;
+     background-size: cover;
+     margin-bottom: 0px;
+     margin-top: 0px;
+ }
+ .logo
+ {
+    
+     border-radius: 50%;
+     margin-top: 0px;
+     border: 5px solid orange;
+ }
+ .company-name
+ {
+   
+  
+
+ }
+ .heading
+ {
+     color: white;
+     margin-top: 50px;
+     font-size: 50px;
+ }
+ .down
+ {
+     margin-top: 30px;
+     border-radius: 50%;
+     border: 3px solid lightgrey;
+    position: relative;
+ }
+ .down:hover
+ {
+background-color: aliceblue;
+ }
+ .heading2
+ {
+    color: white;
+     margin-top:20px;
+     font-size: 40px;
+ }
+ .navbar
+ {
+     background:lightblue;
+     margin: 0px 0px;
+     padding: 0px 0px;
+     overflow: hidden;
+    
+ }
+
+.topnav
+{
+    float: left;
+}
+.nav a{
+    color:orange;
+}
+.head
+{
+    font-size: 15px;
+    margin-left: 0 px;
+    
+}
+
+.head:hover
+{
+    background: white;
+    color: black;
+}
+.modal
+{
+width:50%;
+margin: auto;
+border-radius:10%;
+
+   
+}
+.input-group
+{
+    margin-top:15px;
+    width: auto;
+    
+}
+.forms
+{
+    width:50%;
+    height:60%;
+}
+.btn{
+    margin-top: 15px;
+    background: purple;
+    color: white;
+
+}
+.btn:hover
+{
+    background: green;
+}
+.modal-content
+{
+    background: lightblue;
+}
+.navbar
+{
+    background: #333;
+
+}
+.icon-bar
+{
+    margin-top: 0px;
+    padding: 0px 0px;
+    color:orange ;
+
+}
+.orange
+{
+    color: orange;
+}
+.forgetpass
+{
+    margin-top: 15px;
+}
+.forgetcolor
+{
+    color: blue;
+    margin-top: 10px;
+}
+#home
+{
+    width: 100%;
+    height:100%;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    
+    
+}
+.lefty
+{
+    background: url(final.jpg);
+    width: 100%;
+    height: 100%;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+.righty
+{
+    background:white;
+   
+    margin: 0px 0px;
+    padding: 0px 0px;
+   
+}
+.images
+{
+    margin: 0px 0px;
+  
+}
+.headings
+{
+    text-align: center;
+    color: white;
+    text-shadow: #333;
+
+}
+.rightcol
+{
+    
+    width: 100%;
+    height:100%;
+}
+.feel
+{
+    margin: 100px 50px;
+    align-items: center;
+}
+.ron
+{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+.navbat
+{
+    
+margin: 0px 0px;
+padding: 0px 0px;
+}
+#services
+{
+    
+}
+.imageblock{
+    padding: 15px 5px;
+    width:"40%";
+    
+}
+.fonty
+{
+    font-size: 22px;
+}
+#contactus
+{
+    
+    margin-top: 90px;
+    background:darkgoldenrod;
+}
+.foot
+{
+    background-color: #333;
+    
+}
+@media screen and (max-width: 768px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+        margin: auto;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        margin:auto;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .down {
+        -ms-flex: 100%;
+        flex: 100%;
+        width:12%;
+        height: 10%;
+        margin:auto;
+        
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .inp {
+        -ms-flex: 100%;
+        flex: 100%;
+        width:auto;
+        margin-top: 5px;
+        height: 10%;
+        margin:auto;
+        
+    }
+    .txtarea
+    {
+        
+    }
+}
+.texty
+{
+    font-size: 12px;
+}
+.affix {
+      top: 0;
+      width: 100%;
+      z-index: 999 !important;
+  }
+
+  .affix + .container-fluid {
+      padding-top: 70px;
+  }
+    
+
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<div class="container-fluid">
+     
+    <div class="jumbotron intro"> 
+        <div style="opacity:1;">
+        <img class="logo center-block"  src="logo.png"> 
+        </div>
+        <div class="company-name ">
+                <h1 class="text-center heading" style="margin-top: 10px;color:white"> Welcome to</h1>
+        <h1 class="text-center heading" style="margin-top: 10px;color:white"> SriJay TechInsights</h1>
+        <h2 class="text-center heading2 " style="color: black;" > Logistics </h2>
+        <a href="#navbat"><img src="down.gif "class="center-block down " style="background: orange" width="6%" height="10%" ></a>
+    </div>
+    </div>
+
+  
+  <div class="">
+<nav class="navbar " id="navbat" data-spy="affix" data-offset-top="100" >
+        <div class="container" >
+          <div class="navbar-header " style="margin-right: 20px;">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
+              <span class="glyphicon glyphicon-triangle-bottom orange"></span>
+                                    
+            </button>
+            <a class="navbar-brand" href="#">WebsiteName</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li ><a class="head " href="#home">Home</a></li>
+              <li ><a href="#services" class="head ">Services </a></li>
+              <li><a href="#contactus" class="head ">Contact Us</a></li>
+            </ul>
+            <ul class="nav navbar-nav " style="margin: 0px 0px;">
+              <li style="    margin-right: 0px;"><a href="#navbat" data-toggle="modal" data-target="#myModal" style="margin: 0px 0px;"><span class="glyphicon glyphicon-log-in head"></span> Login</a></li>
+              <div class="modal fade mode" id="myModal" role="dialog">
+                    <div class="modal-dialog modal-md ">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content ">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                       <center>  <h4 class="modal-title" style="color: green;font-size: 35px;">Sign In</h4></center> 
+                        </div>
+                        <div class="modal-body">
+                                <form class="form" >
+                                        <div class="input-group">
+                                          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                          <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+                                        </div>
+                                        <div class="input-group">
+                                          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                          <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                                        </div>
+                                        <div  class="forgetpass">  
+                                            <a class="forgetcolor" style="color: blue;">Forgot password</a>
+                                        </div>
+                                        <div >
+                                                <center><button class="btn btn-lg clo"  > Login</button></center>
+                                        </div>
+                                        
+                                        
+                                      </form>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+              
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+      </div>
+  
+    
+  
+  
+<section id="home">
+    <div class"row ron">
+        <div class="lefty jumbotron">
+            <div class="row">
+          <div class="col-sm-6"></div>
+          <div class="col-sm-6">
+              <div class="feel">
+              <h1  style="color: white;font-size: 60px;font-family: cursive "> Feel the Future</h1> 
+            </div>
+          </div>
+        </div>
+        
+        </div>
+
+    </div>
+</section>
+
+
+<section id="services" style="margin-top: 20px;">
+    <div class="row" style="margin-top: 50px;">
+        <div><center><h1 style="font-size: 60px;font-family: cursive;margin-top: 50px;">Our Services</h1></center></div>
+        <center><h2>we are offering the best services in the market.</h2></center>
+     </div>
+     <div class="container-fluid" style="margin-top:10px;">
+     <div class="row column"style="margin-top:20px;">
+            <div class="col-sm-4" style="background-color:white;">
+            <div class="row" style=" margin-top:20px;">
+                <div class="col-sm-4" style="background-color: #4d94ff;">
+                <img src="temperature1.png"style="padding:20px 10px;" height="20%" width="100%">
+                </div>
+                <div class="col-sm-8" >
+                        <h1 class="text-center fonty"> Temperature Tracking</h1>
+                    <p class="text-center texty">With this feature,you can live track the thermal conditions of the parcel without any worries.</p>
+                        </div>
+            </div>
+
+            <div class="row clearfix" style=" margin-top: 30px;">
+                    <div class="col-sm-4" style="background-color: #4d94ff">
+                    <img src="alerts.png"style="padding:20px 10px;" height="20%" width="100%">
+                    </div>
+                    <div class="col-sm-8">
+                    <h1 class="text-center fonty"> SMS Alerts</h1>
+                <p class="text-center">Now you don’t need to be online to track the transport progress .we have SMS for you.</p>
+                    </div>
+                </div>
+                <div class="row clearfix" style=" margin-top: 30px;">
+                        <div class="col-sm-4" style="background-color: #4d94ff">
+                        <img src="parcel.png"style="padding:20px 10px;" height="20%" width="100%">
+                        </div>
+                        <div class="col-sm-8">
+                        <h1 class="text-center fonty"> Parcel Booking</h1>
+                    <p class="text-center">Experience express delivery services with top notch Courier and Parcel booking services by Srijay Tech.</p>
+                        </div>
+                    </div>
+            </div>
+           
+            <div class="col-sm-4" style="background-color:white;"style="margin-top:40px;">
+                    <div class="row clearfix" style=" margin-top:20px;">
+                        <div class="col-sm-4" style="background-color: #4d94ff;">
+                        <img src="humidity.png"style="padding:20px 10px;" height="20%" width="100%">
+                        </div>
+                        <div class="col-sm-8" >
+                                <h1 class="text-center fonty"> Humidity Tracking</h1>
+                            <p class="text-center">With this feature,you will be able to track the humidity of your parcel without any issue. </p>
+                                </div>
+                    </div>
+        
+                    <div class="row clearfix" style="margin-top: 30px;">
+                            <div class="col-sm-4" style="background-color: #4d94ff">
+                            <img src="access.png"style="padding:20px 10px;" height="20%" width="100%">
+                            </div>
+                            <div class="col-sm-8">
+                            <h1 class="text-center fonty"> Access Anywhere</h1>
+                        <p class="text-center"> You can access the services anywhere irrespective of the geographical restrictions. </p>
+                            </div>
+                        </div>
+
+                        <div class="row clearfix" style=" margin-top: 30px;">
+                                <div class="col-sm-4" style="background-color: #4d94ff">
+                                <img src="analytics.png"style="padding:20px 10px;" height="20%" width="100%">
+                                </div>
+                                <div class="col-sm-8">
+                                <h1 class="text-center fonty"> Analytics</h1>
+                            <p class="text-center ">analytics developed through high-level machine learning algorithms will help you track the customer trends.</p>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="col-sm-4" style="background-color:white;"style="margin-top:40px;">
+                            <div class="row clearfix" style=" margin-top:20px;">
+                                <div class="col-sm-4" style="background-color: #4d94ff;">
+                                <img src="location.png"style="padding:20px 10px;" height="20%" width="100%">
+                                </div>
+                                <div class="col-sm-8" >
+                                        <h1 class="text-center fonty"> Location Tracking</h1>
+                                    <p class="text-center"> You can monitor the status of the delivery to ensure that the operation is running as per the schedule.</p>
+                                        </div>
+                            </div>
+                
+                            <div class="row clearfix" style="margin-top: 30px;">
+                                    <div class="col-sm-4" style="background-color: #4d94ff ">
+                                    <img src="24.png"style="padding:20px 10px;" height="20%" width="100%">
+                                    </div>
+                                    <div class="col-sm-8">
+                                    <h1 class="text-center fonty"> Anytime Service</h1>
+                                <p class="text-center">Our Services run round the clock .So,everything will be according to your timeline.</p>
+                                    </div>
+                                </div>
+
+                                <div class="row clearfix" style=" margin-top: 30px;">
+                                        <div class="col-sm-4" style="background-color: #4d94ff">
+                                        <img src="compatable.png"style="padding:20px 10px;" height="20%" width="100%">
+                                        </div>
+                                        <div class="col-sm-8">
+                                        <h1 class="text-center fonty"> Device Compatability</h1>
+                                    <p class="text-center">Our application is deployed and compatable for any device.</p>
+                                        </div>
+                                    </div>
+                            </div>
+
+            </div>
+          </div>
+        </div>
+
+
+</section>
+
+<section id="contactus" class="container-fluid clearfix">
+    <div style="margin-top: 10px;">
+    <div class="row">
+            <div><center><h1 style="font-size: 60px;color:black;margin-top: 40px;">Contact Us</h1></center></div>
+    </div>
+    <div class="row" >
+        <div class="col-md-6" >
+            <div class="col-md-2"></div>
+            <div class="col-md-9" style="background: wheat;margin-top: 100px;border: 4px solid lightgray;border-radius: 6px;">
+            <center><h1 style="font-size: 30px;">Get In Touch</h1></center>
+            <div class="row">
+            <div class="col-md-6">
+            <form class="form" >
+                    <div class="input-group inp  ">
+                      <input id="fn" type="text" class="form-control" name="fn" placeholder="FirstName:">
+                    </div>
+                    
+                    <div class="input-group inp">
+                            <input id="fn" type="text" class="form-control" name="fn" placeholder="Email:">
+                          </div>
+                        </form>        
+                    </div>
+                    <div class="col-md-6">
+                            <form class="form" >
+                                    <div class="input-group inp">
+                                      <input id="fn" type="text" class="form-control" name="fn" placeholder="Secondname:">
+                                    </div>
+                                    
+                                    <div class="input-group inp" >
+                                            <input id="fn" type="text" class="form-control" name="fn" placeholder="Subject:" >
+                                          </div>
+                                        </form>        
+                     </div>
+                    
+                            
+                                    <div style="margin: 5px 5px;">
+                                            <textarea class="form-control txtarea" placeholder="Message:"rows="5" id="comment" style="margin: 10px 0px;border: 1px solid black"></textarea>
+                                        </div>   
+                            
+                                        <button class=" btn-lg clo btn-success center-block" > Submit</button>
+                        
+
+        </div>
+       
+    </div>
+
+    </div>
+    <div class="col-md-6">
+
+        <div class="information" style="margin-top: 100px;">
+          <center> <h1 class="center-block"style="color:black;font-size:30px;">Address</h1></center> 
+          <center>  <h2 class="center-block" style="color: white;font-size:25px;"> SriJay Techinsights Pvt. Ltd.,
+                    Plot No.74, 1st floor,
+                    Viswanatha Towers, P & T Colony,
+                    Tirumalghery, Secunderabad-15.</h2></center>
+
+                    <center> <h1 class="center-block"style="color:black;font-size:30px;">Phone</h1></center>           
+                   <center> <h2 class="center-block" style="color: white;font-size:25px;">040-27745999</h2></center>
+
+
+                    <center> <h1 class="center-block"style="color:black;font-size:30px;">Email</h1></center>           
+                  <center> <h2 class="center-block" style="color: white;font-size:25px;">info@srijaytech.com</h2></center> 
+        </div>
+        <div class="row" style="background: darkgoldenrod" height="30%">
+            <h1 style="color: darkgoldenrod">---</h1>
+            <h1 style="color: darkgoldenrod">---</h1>
+            <h1 style="color: darkgoldenrod">---</h1>
+           
+
+            
+        </div>
+
+    </div>
+    
+   
+    </div>
+    
+    
+
+</div>   
+                 
+        
+
+
+</section>
+
+
+
+<section class="foot">
+    <footer id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+							<!-- Widgetized footer -->
+		<footer id="footer-widgets">
+			<div class="footer footer-style-cols_1">
+				<div class="container">
+					<div class="row">
+						
+<h4 style="text-align: center; margin-top: 20px;font-weight:400;"> <a href="http://www.srijaytech.com/" style="font-weight:400;">About SriJay</a>  |  <a href="http://www.srijaytech.com/contact-us/" style="font-weight:400;">Contact Us</a></h4>
+
+<p style="text-align: center; color: #f2f2f2; margin-top: 20px;">© 2016 SriJay Techinsights Private Limited. All Rights Reserved.</p></div>
+		<div class="clearfix"></div></div></div>					</div>
+				</div>
+			</div>
+		</footer>
+</section>
+
+
+
+</div>
+
+
+
+
+
+
+    
+
+
+
+
+</body>
+
+</html>
