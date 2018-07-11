@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
@@ -20,10 +21,37 @@
       }
     }
 
-    
+   
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});   
+
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
   
 
-    </script>
+  
   
   <style>
   .sticky {
@@ -88,6 +116,7 @@ background-color: aliceblue;
      
         background-color: white;
         height: auto;
+        box-shadow: 0 4px 8px 0 rgba(245, 113, 6, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
    
    
@@ -142,7 +171,7 @@ border-radius:10%;
 }
 .modal-content
 {
-    background: lightblue;
+    background-color: #e2860d;
     width: auto;
 }
 
@@ -168,22 +197,22 @@ border-radius:10%;
 }
 #home
 {
-    width: 100%;
+    
     position: relative;
-    height:100%;
-    margin: 0px 0px;
+    
+   margin-top: 95px;
     padding: 0px 0px;
     
     
 }
 .lefty
 {
-    background: url(final.jpg) ;
-    background-repeat: no-repeat;
+    background-image: url(new.png) ;
+
     background-size: cover;
 
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     margin: 0px 0px;
     padding: 0px 0px;
 }
@@ -231,7 +260,7 @@ padding: 0px 0px;
 }
 #services
 {
-    
+   margin-top: 0px; 
 }
 .imageblock{
     padding: 15px 5px;
@@ -240,13 +269,14 @@ padding: 0px 0px;
 }
 .fonty
 {
+    color: blue;
     font-size: 22px;
 }
 #contactus
 {
     
     margin-top: 90px;
-    background:darkgoldenrod;
+    background-color:  #b2beb5;
 }
 .foot
 {
@@ -258,8 +288,8 @@ padding: 0px 0px;
     .lefty{
         -ms-flex: 100%;
         flex: 100%;
-        height: 100%;
-        width: 100%;
+        height: auto;
+        width: auto;
     }
     #home{
         -ms-flex: 100%;
@@ -315,6 +345,7 @@ padding: 0px 0px;
 .texty
 {
     font-size: 12px;
+    color: black;
 }
 .navbar-brand {
   background: url(Srijay.png) center / contain no-repeat;
@@ -339,14 +370,16 @@ padding: 0px 0px;
  .pora
     {
         color: black;
+        font-size: 20px;
         text-align: center;
-        font-weight: bold;
+        
     }
 
 @media screen and (max-width: 1055px) {
     .pora
     {
         color: white;
+        font-size: 20px;
         font-weight: bold;
     }
     
@@ -369,10 +402,10 @@ padding: 0px 0px;
                   <div class="modal-content ">
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal">&times;</button>
-                   <center>  <h4 class="modal-title" style="color: green;font-size: 35px;">Sign In</h4></center> 
+                   <center>  <h4 class="modal-title" style="color: blue;font-size: 35px;">Sign In</h4></center> 
                     </div>
                     <div class="modal-body">
-                            <form class="form"  action="login.php" method="POST">
+                            <form class="form" >
                                     <div class="input-group">
                                       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                       <input id="email" type="text" class="form-control" name="uname" placeholder="Email">
@@ -385,7 +418,7 @@ padding: 0px 0px;
                                         <a class="forgetcolor" style="color: blue;">Forgot password</a>
                                     </div>
                                     <div >
-                                            <button class="btn btn-lg clo center-block" id="golden"  > Login</button>
+                                          <a href="AfterLogin.html">  <button class="btn btn-lg clo center-block" id="golden" onclick="window.location='AfterLogin.html'"  > Login</button></a> 
                                     </div>
                                     
                                     
@@ -415,9 +448,9 @@ padding: 0px 0px;
                              
                               <div class="collapse navbar-collapse" id="myNavbar" style="margin-top: 40px; margin-right:0px; ">
                                 <ul class="nav navbar-nav navbar-right">
-                                  <li class="head"><a class="head"style="color: black" href="#home">Home</a></li>
-                                  <li class="head"><a  class="head"style="color: black" href="#services">Services</a></li>
-                                  <li class="head"><a  class="head"style="color: black" href="#contactus">ContactUs</a></li>
+                                  <li class="head"><a class="head "style="color: black" href="#home" >Home</a></li>
+                                  <li class="head"><a  class="head "style="color: black" href="#services">Services</a></li>
+                                  <li class="head"><a  class="head "style="color: black" href="#contactus">ContactUs</a></li>
                                   <li style="    margin-right: 0px;"><a href="#navbat" data-toggle="modal" data-target="#myModal" style="margin: 0px 0px;color: black"><span class="glyphicon glyphicon-log-in head"></span> Login</a></li>
                                 </ul> 
                                       </div>
@@ -435,16 +468,17 @@ padding: 0px 0px;
     <div class"row ron">
         <div class="lefty jumbotron">
             <div class="row">
-          <div class="col-sm-6">
-           
-          </div>
+         
           <div class="col-sm-6">
               <div class="feel">
                     <center> <p class="detail ">SriJay <span class="name">TechInsights</span> <span style="color: white;">Logistics</span></p> </center>                
-                    <h1  style="color: white;font-size: 60px;font-family: cursive;;text-align: center  "> Feel the Future</h1> 
+                    <h1  style="color: black;font-size: 40px;font-family: cursive;;text-align: center  "> Feel the Future</h1> 
                     <p class="pora">A   well-organized supply chain management is the key to the success of the business of any field. .</p>
             </div>
           </div>
+          <div class="col-sm-6">
+           
+        </div>
         </div>
         
         </div>
@@ -453,16 +487,16 @@ padding: 0px 0px;
 </section>
 
 
-<section id="services" style="margin-top: 100px;">
-    <div class="row" style="margin-top: 100px;">
-        <div><center><h1 style="font-size: 60px;font-family: cursive;margin-top: 100px;">Our Services</h1></center></div>
+<section id="services"  class="services"style="margin-top: 20px;">
+    <div class="row" style="margin-top: 40px;">
+        <div><center><h1 style="font-size: 60px;font-family: cursive;margin-top: 0px;">Our Services</h1></center></div>
         <center><h2>we are offering the best services in the market.</h2></center>
      </div>
      <div class="container-fluid" style="margin-top:10px;">
      <div class="row column"style="margin-top:20px;">
             <div class="col-sm-4" style="background-color:white;">
             <div class="row" style=" margin-top:20px;">
-                <div class="col-sm-4" style="background-color: #4d94ff;">
+                <div class="col-sm-4" style="background-color: #e2860d;">
                 <img src="temperature1.png"style="padding:20px 10px;" height="20%" width="100%">
                 </div>
                 <div class="col-sm-8" >
@@ -472,85 +506,85 @@ padding: 0px 0px;
             </div>
 
             <div class="row clearfix" style=" margin-top: 30px;">
-                    <div class="col-sm-4" style="background-color: #4d94ff">
+                    <div class="col-sm-4" style="background-color: #e2860d">
                     <img src="alerts.png"style="padding:20px 10px;" height="20%" width="100%">
                     </div>
                     <div class="col-sm-8">
                     <h1 class="text-center fonty"> SMS Alerts</h1>
-                <p class="text-center">Now you don’t need to be online to track the transport progress .we have SMS for you.</p>
+                <p class="text-center texty">Now you don’t need to be online to track the transport progress .we have SMS for you.</p>
                     </div>
                 </div>
                 <div class="row clearfix" style=" margin-top: 30px;">
-                        <div class="col-sm-4" style="background-color: #4d94ff">
+                        <div class="col-sm-4" style="background-color: #e2860d">
                         <img src="parcel.png"style="padding:20px 10px;" height="20%" width="100%">
                         </div>
                         <div class="col-sm-8">
                         <h1 class="text-center fonty"> Parcel Booking</h1>
-                    <p class="text-center">Experience express delivery services with top notch Courier and Parcel booking services by Srijay Tech.</p>
+                    <p class="text-center texty">Experience express delivery services with top notch Courier and Parcel booking services by Srijay Tech.</p>
                         </div>
                     </div>
             </div>
            
             <div class="col-sm-4" style="background-color:white;"style="margin-top:40px;">
                     <div class="row clearfix" style=" margin-top:20px;">
-                        <div class="col-sm-4" style="background-color: #4d94ff;">
+                        <div class="col-sm-4" style="background-color: #e2860d;">
                         <img src="humidity.png"style="padding:20px 10px;" height="20%" width="100%">
                         </div>
                         <div class="col-sm-8" >
                                 <h1 class="text-center fonty"> Humidity Tracking</h1>
-                            <p class="text-center">With this feature,you will be able to track the humidity of your parcel without any issue. </p>
+                            <p class="text-center texty">With this feature,you will be able to track the humidity of your parcel without any issue. </p>
                                 </div>
                     </div>
         
                     <div class="row clearfix" style="margin-top: 30px;">
-                            <div class="col-sm-4" style="background-color: #4d94ff">
+                            <div class="col-sm-4" style="background-color: #e2860d">
                             <img src="access.png"style="padding:20px 10px;" height="20%" width="100%">
                             </div>
                             <div class="col-sm-8">
                             <h1 class="text-center fonty"> Access Anywhere</h1>
-                        <p class="text-center"> You can access the services anywhere irrespective of the geographical restrictions. </p>
+                        <p class="text-center texty"> You can access the services anywhere irrespective of the geographical restrictions. </p>
                             </div>
                         </div>
 
                         <div class="row clearfix" style=" margin-top: 30px;">
-                                <div class="col-sm-4" style="background-color: #4d94ff">
+                                <div class="col-sm-4" style="background-color: #e2860d">
                                 <img src="analytics.png"style="padding:20px 10px;" height="20%" width="100%">
                                 </div>
                                 <div class="col-sm-8">
                                 <h1 class="text-center fonty"> Analytics</h1>
-                            <p class="text-center ">analytics developed through high-level machine learning algorithms will help you track the customer trends.</p>
+                            <p class="text-center texty">analytics developed through high-level machine learning algorithms will help you track the customer trends.</p>
                                 </div>
                             </div>
                     </div>
 
                     <div class="col-sm-4" style="background-color:white;"style="margin-top:40px;">
                             <div class="row clearfix" style=" margin-top:20px;">
-                                <div class="col-sm-4" style="background-color: #4d94ff;">
+                                <div class="col-sm-4" style="background-color: #e2860d;">
                                 <img src="location.png"style="padding:20px 10px;" height="20%" width="100%">
                                 </div>
                                 <div class="col-sm-8" >
                                         <h1 class="text-center fonty"> Location Tracking</h1>
-                                    <p class="text-center"> You can monitor the status of the delivery to ensure that the operation is running as per the schedule.</p>
+                                    <p class="text-center texty"> You can monitor the status of the delivery to ensure that the operation is running as per the schedule.</p>
                                         </div>
                             </div>
                 
                             <div class="row clearfix" style="margin-top: 30px;">
-                                    <div class="col-sm-4" style="background-color: #4d94ff ">
+                                    <div class="col-sm-4" style="background-color: #e2860d ">
                                     <img src="24.png"style="padding:20px 10px;" height="20%" width="100%">
                                     </div>
                                     <div class="col-sm-8">
                                     <h1 class="text-center fonty"> Anytime Service</h1>
-                                <p class="text-center">Our Services run round the clock .So,everything will be according to your timeline.</p>
+                                <p class="text-center texty">Our Services run round the clock .So,everything will be according to your timeline.</p>
                                     </div>
                                 </div>
 
                                 <div class="row clearfix" style=" margin-top: 30px;">
-                                        <div class="col-sm-4" style="background-color: #4d94ff">
+                                        <div class="col-sm-4" style="background-color: #e2860d">
                                         <img src="compatable.png"style="padding:20px 10px;" height="20%" width="100%">
                                         </div>
                                         <div class="col-sm-8">
                                         <h1 class="text-center fonty"> Device Compatability</h1>
-                                    <p class="text-center">Our application is deployed and compatable for any device.</p>
+                                    <p class="text-center texty">Our application is deployed and compatable for any device.</p>
                                         </div>
                                     </div>
                             </div>
@@ -570,7 +604,7 @@ padding: 0px 0px;
     <div class="row" >
         <div class="col-md-6" >
             <div class="col-md-2"></div>
-            <div class="col-md-9" style="background: wheat;margin-top: 100px;border: 4px solid lightgray;border-radius: 6px;">
+            <div class="col-md-9" style="background: orange;margin-top: 100px;border: 4px solid lightgray;border-radius: 6px;">
             <center><h1 style="font-size: 30px;">Get In Touch</h1></center>
             <div class="row">
             <div class="col-md-6">
@@ -612,23 +646,23 @@ padding: 0px 0px;
     <div class="col-md-6">
 
         <div class="information" style="margin-top: 100px;">
-          <center> <h1 class="center-block"style="color:black;font-size:30px;">Address</h1></center> 
-          <center>  <h2 class="center-block" style="color: white;font-size:25px;"> SriJay Techinsights Pvt. Ltd.,
+          <center> <h1 class="center-block"style="color:blue;font-size:30px;">Address</h1></center> 
+          <center>  <h2 class="center-block" style="color: black;font-size:25px;"> SriJay Techinsights Pvt. Ltd.,
                     Plot No.74, 1st floor,
                     Viswanatha Towers, P & T Colony,
                     Tirumalghery, Secunderabad-15.</h2></center>
 
-                    <center> <h1 class="center-block"style="color:black;font-size:30px;">Phone</h1></center>           
-                   <center> <h2 class="center-block" style="color: white;font-size:25px;">040-27745999</h2></center>
+                    <center> <h1 class="center-block"style="color:blue;font-size:30px;">Phone</h1></center>           
+                   <center> <h2 class="center-block" style="color: black;font-size:25px;">040-27745999</h2></center>
 
 
-                    <center> <h1 class="center-block"style="color:black;font-size:30px;">Email</h1></center>           
-                  <center> <h2 class="center-block" style="color: white;font-size:25px;">info@srijaytech.com</h2></center> 
+                    <center> <h1 class="center-block"style="color:blue;font-size:30px;">Email</h1></center>           
+                  <center> <h2 class="center-block" style="color: black;font-size:25px;">info@srijaytech.com</h2></center> 
         </div>
-        <div class="row" style="background: darkgoldenrod" height="30%">
-            <h1 style="color: darkgoldenrod">---</h1>
-            <h1 style="color: darkgoldenrod">---</h1>
-            <h1 style="color: darkgoldenrod">---</h1>
+        <div class="row" style="background-color:  #b2beb5" height="30%">
+            <h1 style="color:  #b2beb5">---</h1>
+            <h1 style="color:  #b2beb5">---</h1>
+            <h1 style="color:  #b2beb5">---</h1>
            
 
             
