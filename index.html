@@ -199,7 +199,8 @@ border-radius:10%;
 {
     
     position: relative;
-    
+    height: auto;
+    width: auto;
    margin-top: 95px;
     padding: 0px 0px;
     
@@ -260,6 +261,8 @@ padding: 0px 0px;
 }
 #services
 {
+    width: auto;
+    height: auto;
    margin-top: 0px; 
 }
 .imageblock{
@@ -385,9 +388,24 @@ padding: 0px 0px;
     
  }
 
+@media screen and (max-width: 500px) {  
+    #home
+    {
+        height: 100%;
+    }
+    
+ }
+ @media screen and (max-width: 320px) {
+    #home
+    {
+        height: 120%;
+    }
+    
+ }
 
- p.detail { color:orange;font-size:40px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
-    span.name { color:blue;font-size:40px ;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif}
+
+ p.detail {text-align: center; color:orange;font-size:40px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+    span.name { text-align: center;color:blue;font-size:40px ;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif}
 
     
 
@@ -487,7 +505,7 @@ padding: 0px 0px;
 </section>
 
 
-<section id="services"  class="services"style="margin-top: 20px;">
+<section id="services"  class="services"style="margin-top: 20px;position: relative;">
     <div class="row" style="margin-top: 40px;">
         <div><center><h1 style="font-size: 60px;font-family: cursive;margin-top: 0px;">Our Services</h1></center></div>
         <center><h2>we are offering the best services in the market.</h2></center>
